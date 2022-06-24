@@ -1,0 +1,34 @@
+{% extends "futbol_app/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>Buscador de jugadores</h1>
+    <br>
+    
+    <h3>Podes buscar un jugador por su número de camiseta:</h3>
+    <form action="/futbol_app/buscar/" method="GET">
+
+        <input type="number", name="camiseta", id="camiseta">
+
+        <input type="submit", value="Buscar">
+
+    </form>
+
+    <p>Estamos buscando el jugador con la camiseta {{camiseta}}</p>
+
+    {% if jugador %}
+
+    <ul>
+    {% for jugador in jugadores %}
+        <li>{{jugador.apellido}}</li>
+        <li>{{jugador.camiseta}}</li>
+    {% endfor %}
+    </ul>
+
+    {% endif %}
+    
+</div>
+
+{% endblock %}
