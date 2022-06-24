@@ -25,7 +25,6 @@ urlpatterns = [
     path('form_jugadores', views.form_jugadores, name="Jugadores"),
     path('form_tecnicos', views.form_tecnicos, name="Tecnicos"),
     path('form_clubes', views.form_clubes, name="Clubes"),
-    # path('buscar_jugador', views.buscar, name="Busqueda"),
-    path('buscar/', views.buscar),
+    path('futbol_app/buscar/', views.buscar),
 
 ]

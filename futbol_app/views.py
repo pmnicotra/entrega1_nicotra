@@ -83,7 +83,7 @@ def buscar(request):
         print(camiseta)
         jugador = Jugador.objects.filter(camiseta__icontains=camiseta)
         print(jugador)
-        return render(request, 'futbol_app/buscar_jugador.html', {'jugador':jugador, 'camiseta':camiseta})
+        return render(request, 'futbol_app/buscar_jugador.html', {'jugadores':jugador, 'camiseta':camiseta})
     else:
         respuesta = "No enviaste datos"
     return render(request, 'futbol_app/inicio.html', {'respuesta':respuesta})
